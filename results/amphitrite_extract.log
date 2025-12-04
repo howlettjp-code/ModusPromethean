@@ -1,0 +1,140 @@
+=== Tue Nov  4 11:24:27 AM EST 2025 : start amphitrite photo extraction ===
+1) install required packages (may ask for sudo password)
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://us.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:5 https://packages.microsoft.com/repos/edge stable InRelease
+Hit:6 https://packages.microsoft.com/repos/code stable InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+2) ensure usbmuxd running and pair device
+ActivationState: Activated
+ActivationStateAcknowledged: true
+BasebandActivationTicketVersion: V2
+BasebandCertId: 524245983
+BasebandChipID: 104
+BasebandKeyHashInformation: AKeyStatus: 64
+ SKeyStatus: 2
+BasebandMasterKeyHash: 1B41607650EBF11C6B39F41CB267DC64C121A9BCF44DBA5D28F55ACC86361BBA366554CD57B4C466055803E1EF81C870
+BasebandRegionSKU: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+BasebandSerialNumber: v8A2uJg/qqkAAAAA
+BasebandStatus: BBInfoAvailable
+BasebandVersion: 6.03.01
+BluetoothAddress: 74:42:8b:28:54:e3
+BoardId: 2
+BootSessionID: FD2D8485-109F-4065-8BE1-0A53E0725C45
+BrickState: false
+BuildVersion: 22G100
+CPUArchitecture: arm64e
+CarrierBundleInfoArray[1]:
+ 0: CFBundleIdentifier: com.apple.TMobile_US
+  CFBundleVersion: 64.0.2
+  GID1: 544d
+  IntegratedCircuitCardIdentity: 8901260233769982896
+  InternationalMobileSubscriberIdentity: 310260236998289
+  MCC: 310
+  MNC: 260
+  MobileEquipmentIdentifier: 35390110487613
+  SIMGID1: VE0=
+  Slot: kOne
+  kCTPostponementInfoAvailable: SIMCarrierInfo
+CertID: 524245983
+ChipID: 32816
+ChipSerialNo: v8A2uJg/qqkAAAAA
+DeviceClass: iPhone
+DeviceColor: 1
+DeviceName: Amphitrite
+DieID: 287526619480110
+EthernetAddress: 74:42:8b:29:e3:c5
+FirmwareVersion: iBoot-11881.140.96
+FusingStatus: 3
+GID1: 544d
+HardwareModel: D431AP
+HardwarePlatform: t8030
+HasSiDP: true
+HostAttached: true
+HumanReadableProductVersionString: 18.6.2
+IntegratedCircuitCardIdentity: 8901260233769982896
+InternationalMobileEquipmentIdentity: 353901104876133
+InternationalMobileEquipmentIdentity2: 353901104792744
+InternationalMobileSubscriberIdentity: 310260236998289
+InternationalMobileSubscriberIdentityOverride: false
+MLBSerialNumber: F3Y94230BJYLTQ9A
+MobileEquipmentIdentifier: 35390110487613
+MobileSubscriberCountryCode: 310
+MobileSubscriberNetworkCode: 260
+ModelNumber: MWFW2
+NonVolatileRAM: StartupMute: MQ==
+ SystemAudioVolumeSaved: MQ==
+ auto-boot: dHJ1ZQ==
+ backlight-level: NTk4
+ backlight-nits: MHgwMDliMDAwMA==
+ boot-args: 
+ bootdelay: MA==
+ fm-account-masked: Y+KAouKAouKAouKAouKAokBnbWFpbC5jb20=
+ fm-activation-locked: WUVT
+ fm-spkeys: YnBsaXN0MDDWAQIDBAUGBxAREhMUUXZRbFFiUWlRc1Fw0ggJCg9RMVEy0gsMDQ5RbFFzEAAQYNILDA0OTxAQbwjV2/pIQvm4D9Ahyn5nDzNBxwspGtZiqhABTxAg//p6GqwBQjz31+TQFsr90LLC4FkJpAZhkFdmMXfb9RZPEDkEj1wLtglrTghAZpqOTtdB/k9eA0MGdDHdMJqiDoZEYEyrhCp7lvkIk0ydEnYJGcwSJoG6eY1Vy5MIFRcZGx0fISYoKi8xMzU3PE9YWn0AAAAAAAABAQAAAAAAAAAVAAAAAAAAAAAAAAAAAAAAuQ==
+ fm-spstatus: WUVT
+ usbcfwflasherResult: Tm8gZXJyb3Jz
+PRIVersion_Major: 0
+PRIVersion_Minor: 0
+PRIVersion_ReleaseNo: 17
+PairRecordProtectionClass: 4
+PartitionType: GUID_partition_scheme
+PasswordProtected: true
+PhoneNumber: +1 (862) 321-8380
+PkHash: Hz9b38WSRX/cE6qam0xEfaM6v7nHw0ZdWjTPu2WOXVU=
+ProductName: iPhone OS
+ProductType: iPhone12,5
+ProductVersion: 18.6.2
+ProductionSOC: true
+ProtocolVersion: 2
+ProximitySensorCalibration: f3oABTIAHgBHR11B9/IxQgAAyEIb5BhBD2AzQgAAFkMb5BhBD2AzQgAAFkMBg8lCPWdEwZnTuURsvbpETsC5RJSquEQ5GmlBIZaBQbcAo0FCBqhBAAAgQiIkHEM4LsFBAABIQnUH0kNPZdFDPIcBRqmTV0O6aqtdASIYGovmmEUSq5ZD3R9DRQMAAAAAAACJ
+RegionInfo: LL/A
+SIM1IsEmbedded: false
+SIMGID1: VE0=
+SIMStatus: kCTSIMSupportSIMStatusReady
+SIMTrayStatus: kCTSIMSupportSIMTrayInsertedWithSIM
+SerialNumber: F2NZK7SUN70L
+SoftwareBehavior: EQAAAAAAAAAAAAAAAAAAAA==
+SoftwareBundleVersion: 
+SupportedDeviceFamilies[1]:
+ 0: 1
+TelephonyCapability: true
+TimeIntervalSince1970: 1762273474.9440329
+TimeZone: America/New_York
+TimeZoneOffsetFromUTC: -18000
+TrustedHostAttached: true
+UniqueChipID: 287526619480110
+UniqueDeviceID: 00008030-000105810204802E
+UseRaptorCerts: true
+Uses24HourClock: true
+WiFiAddress: 74:42:8b:21:a0:dd
+WirelessBoardSerialNumber: F000178B1E2A
+kCTPostponementInfoPRIVersion: 0.0.17
+kCTPostponementInfoServiceProvisioningState: true
+kCTPostponementStatus: kCTPostponementStatusActivated
+3) mount iPhone filesystem with ifuse (needs phone unlocked/trusted)
+4) list DCIM and start rsync copy (resumable)
+total 0
+drwxr-xr-x 13 jp jp   416 Sep 24 18:26 .
+drwxr-xr-x 22 jp jp   736 Jul 23 09:08 ..
+drwxr-xr-x  2 jp jp  4928 Aug 26 04:55 100APPLE
+drwxr-xr-x  2 jp jp 29152 Aug 26 04:55 101APPLE
+drwxr-xr-x  2 jp jp 24864 Aug 26 04:55 102APPLE
+drwxr-xr-x  2 jp jp 43968 Aug 26 04:55 103APPLE
+drwxr-xr-x  2 jp jp 38944 Aug 26 04:55 104APPLE
+drwxr-xr-x  2 jp jp 31520 Aug 26 04:55 105APPLE
+drwxr-xr-x  2 jp jp 56704 Aug 26 04:55 106APPLE
+drwxr-xr-x  2 jp jp 47584 Aug 26 04:55 107APPLE
+drwxr-xr-x  2 jp jp 41792 Oct  5 05:41 108APPLE
+drwxr-xr-x  2 jp jp  3904 Oct 28 21:15 109APPLE
+drwxr-xr-x  4 jp jp   128 Aug 26 04:55 .MISC
+rsync: --minsize=1: unknown option
+rsync error: syntax or usage error (code 1) at main.c(1795) [client=3.2.7]

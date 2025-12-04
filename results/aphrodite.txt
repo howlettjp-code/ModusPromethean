@@ -1,0 +1,5 @@
+=== Running aphrodite.sh on aphrodite @ Wed Dec  3 04:02:01 AM EST 2025 ===
+Working Directory: /home/jp/ModusPromethean/repo
+
+[!] Run this on the local box with sudo, e.g.:
+    sudo aphrodite.sh

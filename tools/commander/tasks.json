@@ -1,0 +1,21 @@
+[
+  {
+    "id": "php82-mp-01",
+    "goal": "Upgrade PHP on root@jphowlett to >=8.2 and stop Composer PHP version errors for /var/www/moduspromethean.com.",
+    "host": "jphowlett",
+    "remote_user": "root",
+    "status": "failed",
+    "history": [
+      {
+        "ts": "2025-12-03T09:19:01.502392Z",
+        "action": "jphowlett: add-apt-repository -y ppa:ondrej/php && apt update",
+        "ok": false,
+        "output": "ssh: Could not resolve hostname jphowlett: Temporary failure in name resolution\n"
+      }
+    ],
+    "notes": [
+      "Local host: aphrodite (uses sudo for apt/ssh).",
+      "Remote: root@jphowlett (NO sudo)."
+    ]
+  }
+]

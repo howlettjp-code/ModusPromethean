@@ -1,0 +1,73 @@
+---
+- name: Universal App Stack (Dev & Prod)
+  hosts: all
+  become: true
+  
+  # Default variables (Safe for Dev). 
+  # You will override 'db_pass' in Prod later.
+  vars:
+    db_name: "promethean_db"
+    db_user: "promethean_user"
+    db_pass: "dev_secret_123" 
+    postgres_version: "16"
+
+  tasks:
+    # --- 1. CORE RUNTIMES ---
+    - name: Install System Basics & Runtimes
+      apt:
+        name:
+          - apache2
+          - php
+          - libapache2-mod-php
+          - python3
+          - python3-pip
+          - python3-venv
+          - git
+          - curl
+          - acl
+          - python3-psycopg2 # Bridge between Python/Ansible and Postgres
+        state: present
+        update_cache: true
+
+    # --- 2. POSTGRESQL ---
+    - name: Install PostgreSQL
+      apt:
+        name: 
+          - postgresql
+          - postgresql-contrib
+        state: present
+
+    - name: Start PostgreSQL
+      service:
+        name: postgresql
+        state: started
+        enabled: true
+
+    - name: Create DB User
+      community.postgresql.postgresql_user:
+        name: "{{ db_user }}"
+        password: "{{ db_pass }}"
+        role_attr_flags: "CREATEDB"
+      become_user: postgres
+
+    - name: Create Database
+      community.postgresql.postgresql_db:
+        name: "{{ db_name }}"
+        owner: "{{ db_user }}"
+      become_user: postgres
+
+    # --- 3. WEB SERVER ---
+    - name: Start Apache
+      service:
+        name: apache2
+        state: started
+        enabled: true
+
+    # --- 4. SANDBOX WORKSPACE ---
+    - name: Create Workspace Directory
+      file:
+        path: /var/www/html/sandbox
+        state: directory
+        mode: '0777' # Open permissions for the sandbox
+        owner: www-data
+        group: www-data

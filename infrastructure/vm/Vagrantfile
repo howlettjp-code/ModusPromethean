@@ -1,0 +1,54 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-24.04"
+  
+  # --- DIANA: The Workstation (192.168.56.10) ---
+  config.vm.define "diana" do |node|
+    node.vm.hostname = "diana"
+    node.vm.network "private_network", ip: "192.168.56.10"
+    
+    node.vm.provider "virtualbox" do |vb|
+      vb.name = "diana"
+      vb.memory = "2048"
+      vb.cpus = 1
+    end
+
+    # 1. Share the Repo
+    node.vm.synced_folder "../../", "/home/vagrant/repo", create: true 
+
+    # 2. Share the Keys (Isolated to Diana)
+    node.vm.synced_folder "~/ModusPromethean/diana", "/home/vagrant/secrets", create: true
+
+    # 3. Provision Diana (Install Python/Git tools)
+    node.vm.provision "ansible" do |ansible|
+      ansible.playbook = "../ansible/playbook.yml"
+      ansible.verbose = "v"
+      ansible.groups = {
+        "workstation" => ["diana"]
+      }
+    end
+  end
+
+  # --- ELEKTRA: The Server (192.168.56.20) ---
+  config.vm.define "elektra" do |node|
+    node.vm.hostname = "elektra"
+    node.vm.network "private_network", ip: "192.168.56.20"
+    
+    node.vm.provider "virtualbox" do |vb|
+      vb.name = "elektra"
+      vb.memory = "4096"
+      vb.cpus = 2
+    end
+
+    # Share the App Workspace
+    node.vm.synced_folder "./workspace", "/var/www/html/sandbox", create: true, owner: "www-data", group: "www-data"
+
+    # Provision Elektra (Install Apache/Postgres)
+    node.vm.provision "ansible" do |ansible|
+      ansible.playbook = "../ansible/playbook.yml"
+      ansible.verbose = "v"
+      ansible.groups = {
+        "vps" => ["elektra"]
+      }
+    end
+  end
+end

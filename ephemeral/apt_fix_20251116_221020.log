@@ -1,0 +1,18 @@
+[Sun Nov 16 10:10:20 PM EST 2025] Starting apt/dpkg lock cleanup and repair
+Log file: /home/jp/arc/ephemeral/apt_fix_20251116_221020.log
+
+== 1. Checking for running apt/dpkg processes ==
+root        1571  0.0  0.0 424872 10360 ?        Ssl  Nov13   0:05 /usr/sbin/thermald --systemd --dbus-enable --adaptive
+root      158575  0.0  0.0   2800  1832 ?        Ss   Nov15   0:00 /bin/sh /usr/lib/apt/apt.systemd.daily update
+root      158579  0.0  0.0   2800  1836 ?        S    Nov15   0:00 /bin/sh /usr/lib/apt/apt.systemd.daily lock_is_held update
+root      158611  0.0  0.0  18788  7816 ?        S    Nov15   0:04 apt-get -qq -y update
+_apt      158621  0.0  0.0  25512 10136 ?        S    Nov15   0:00 /usr/lib/apt/methods/http
+_apt      158622  0.0  0.0  25512 10100 ?        S    Nov15   0:00 /usr/lib/apt/methods/http
+_apt      158623  0.0  0.0  25448  9904 ?        S    Nov15   0:00 /usr/lib/apt/methods/https
+_apt      158633  0.0  0.0  25412  9680 ?        S    Nov15   0:00 /usr/lib/apt/methods/https
+jp        240092  0.0  0.0   8296  1816 pts/0    S+   22:10   0:00 tee /home/jp/arc/ephemeral/apt_fix_20251116_221020.log
+jp        240095  0.0  0.0   9144  2244 pts/0    S+   22:10   0:00 grep -E apt|dpkg
+
+Detected apt/dpkg-related processes still running.
+If this is an unattended-upgrades job, you may want to wait or reboot.
+Aborting to avoid corrupting package state.

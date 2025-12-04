@@ -1,0 +1,23 @@
+--- Execution Started: Sat Nov 29 06:22:37 PM EST 2025 ---
+[LOGGING ENABLED] Output is being captured to: /home/jp/ModusPromethean/repo/results/push-to-prod.log
+[START] Deployment task initiated.
+Target Server: modpx.dev
+Source Base Directory: /home/jp/ModusPromethean/repo/www
+--------------------------------------------
+[DEPLOYING] Processing site: moduspromethean.com
+sending incremental file list
+moduspromethean.com/moduspromethean.com.conf
+
+sent 239,980 bytes  received 1,382 bytes  160,908.00 bytes/sec
+total size is 200,498,649  speedup is 830.70
+[SUCCESS] moduspromethean.com synced successfully.
+--------------------------------------------
+[DEPLOYING] Processing site: modpx.dev
+sending incremental file list
+modpx.dev/modpx.dev.conf
+
+sent 1,443 bytes  received 54 bytes  2,994.00 bytes/sec
+total size is 1,293  speedup is 0.86
+[SUCCESS] modpx.dev synced successfully.
+--------------------------------------------
+[FINISHED] Task completed successfully.
